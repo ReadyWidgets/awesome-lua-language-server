@@ -1,0 +1,3 @@
+---@meta Gio.AppInfo
+
+---@alias Gio.AppInfoCreateFlags "NONE"|"NEEDS_TERMINAL"|"SUPPORTS_URIS"|"SUPPORTS_STARTUP_NOTIFICATION"

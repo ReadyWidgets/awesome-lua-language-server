@@ -1,0 +1,19 @@
+---@meta Gio
+
+---@class Gio
+---@field AppInfoCreateFlags Gio.AppInfoCreateFlags
+---@field AppInfo Gio.AppInfo
+---@field AppInfoMonitor Gio.AppInfoMonitor
+---@field AppLaunchContext Gio.AppLaunchContext
+---@field AsyncReadyCallback Gio.AsyncReadyCallback
+---@field AsyncResult Gio.AsyncResult
+---@field Cancellable Gio.Cancellable
+---@field DesktopAppInfo Gio.DesktopAppInfo
+---@field DesktopAppLaunchCallback Gio.DesktopAppLaunchCallback
+---@field File Gio.File
+---@field Icon Gio.Icon
+---@field KeyFile Gio.KeyFile
+---@field Settings Gio.Settings
+---@field SpawnChildSetupFunc Gio.SpawnChildSetupFunc
+---@field SpawnFlags Gio.SpawnFlags
+---@field ThemedIcon Gio.ThemedIcon

@@ -1,0 +1,32 @@
+---@meta Gio.DesktopAppInfo
+
+--- Schema for https://docs.gtk.org/gio/class.DesktopAppInfo.html
+---@class Gio.DesktopAppInfo._static : Gio.AppInfo._static
+---@field new fun(desktop_id: string): Gio.DesktopAppInfo
+---@field new_from_filename fun(filename: string): Gio.DesktopAppInfo
+---@field new_from_keyfile fun(key_file: Gio.KeyFile): Gio.DesktopAppInfo
+---@field get_implementations fun(): Gio.DesktopAppInfo[]
+---@field search fun(search_string: string): Gio.DesktopAppInfo[]
+---@field set_desktop_env fun(desktop_env: string)
+
+---@class Gio.DesktopAppInfo : Gio.DesktopAppInfo._static, Gio.AppInfo
+---@field get_action_name fun(self: Gio.DesktopAppInfo, action_name: string): string
+---@field get_boolean fun(self: Gio.DesktopAppInfo, key: string): boolean?
+---@field get_categories fun(self: Gio.DesktopAppInfo): string?
+---@field get_filename fun(self: Gio.DesktopAppInfo): string
+---@field get_generic_name fun(self: Gio.DesktopAppInfo): string?
+---@field get_icon fun(self: Gio.DesktopAppInfo): Gio.ThemedIcon
+---@field get_is_hidden fun(self: Gio.DesktopAppInfo): boolean
+---@field get_keywords fun(self: Gio.DesktopAppInfo): string?
+---@field get_locale_string fun(self: Gio.DesktopAppInfo, key: string): string?
+---@field get_nodisplay fun(self: Gio.DesktopAppInfo): boolean
+---@field get_showin fun(dself: Gio.DesktopAppInfo, esktop_env: string): boolean
+---@field get_startup_wm_class fun(self: Gio.DesktopAppInfo): string?
+---@field get_string fun(self: Gio.DesktopAppInfo, key: string): string?
+---@field get_string_list fun(self: Gio.DesktopAppInfo, key: string): string[]|{}
+---@field has_key fun(self: Gio.DesktopAppInfo, key: string): boolean
+---@field launch_action fun(self: Gio.DesktopAppInfo, action_name: string, launch_context: Gio.AppLaunchContext)
+---@field launch_uris_as_manager fun(self: Gio.DesktopAppInfo, uris: string[], launch_context: Gio.AppLaunchContext, spawn_flags: Gio.SpawnFlags, user_setup: Gio.SpawnChildSetupFunc, user_setup_data: any, pid_callback: Gio.DesktopAppLaunchCallback, pid_callback_data: any, error: GLib.Error)
+---@field launch_uris_as_manager_with_fds fun(self: Gio.DesktopAppInfo, uris: string[], launch_context: Gio.AppLaunchContext, spawn_flags: Gio.SpawnFlags, user_setup: Gio.SpawnChildSetupFunc, user_setup_data: any, pid_callback: Gio.DesktopAppLaunchCallback, pid_callback_data: any, stdin_fd: integer, stdout_fd: integer, stderr_fd: integer, error: GLib.Error)
+---@field list_actions fun(self: Gio.DesktopAppInfo): string[]
+---@field filename string

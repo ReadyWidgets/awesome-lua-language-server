@@ -1,0 +1,35 @@
+---@meta
+
+--- Same as `string`. Used to indicate that a string is locallizable
+--- (in which case, the locallized version should alway be used).
+---@alias FreeDesktop.desktop_entry.localestring string
+
+--- Schema for https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html
+---@class FreeDesktop.desktop_entry
+---@field Type string
+---@field Version string|nil
+---@field Name FreeDesktop.desktop_entry.localestring
+---@field GenericName FreeDesktop.desktop_entry.localestring|nil
+---@field NoDisplay boolean|nil
+---@field Comment FreeDesktop.desktop_entry.localestring|nil
+---@field Icon string|nil
+---@field OnlyShowIn string[]|nil
+---@field NotShowIn string[]|nil
+---@field DBusActivatable boolean|nil
+---@field TryExec string|nil
+---@field Exec string|nil
+---@field Path string|nil
+---@field Terminal boolean|nil
+---@field Actions string[]|nil
+---@field MimeType string[]|nil
+---@field Categories string[]|nil
+---@field Implements string[]|nil
+---@field Keywords FreeDesktop.desktop_entry.localestring[]|nil
+---@field StartupNotify boolean|nil
+---@field StartupWMClass string|nil
+---@field URL string
+---@field PrefersNonDefaultGPU? boolean|nil
+---@field SingleMainWindow boolean|nil
+---@field show boolean
+---@field file string
+---@field icon_path string

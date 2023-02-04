@@ -1,0 +1,149 @@
+---@meta
+
+---@class client._static
+---@field instanecs fun(): integer
+---@field get fun(screen: screen, stacked: boolean): client[]
+---@field disconnect_signal fun(name: string, func: fun(...))
+---@field emit_signal fun(name: string, func: fun(...))
+---@field connect_signal fun(name: string, ...)
+
+---@class client._sub.size_hints
+---@field user_position {x: integer, y: integer}?
+---@field program_position {x: integer, y: integer}?
+---@field user_size {width: integer, height: integer}?
+---@field program_size {width: integer, height: integer}?
+---@field max_width integer?
+---@field max_height integer?
+---@field min_width integer?
+---@field min_height integer?
+---@field width_inc integer?
+---@field height_inc integer?
+---@field win_gravity "north_west"|"north_east"|"south_west"|"south_east"?
+---@field min_aspect_num integer?
+---@field min_aspect_den integer?
+---@field max_aspect_num integer?
+---@field max_aspect_den integer?
+---@field base_width integer?
+---@field base_hegith integer?
+
+---@class client._sub.motify_wm_hints
+---@field functions.all boolean
+---@field functions.resize boolean
+---@field functions.move boolean
+---@field functions.minimize boolean
+---@field functions.maximize boolean
+---@field functions.close boolean
+---@field decorations.all boolean
+---@field decorations.border boolean
+---@field decorations.resizeh boolean
+---@field decorations.title boolean
+---@field decorations.menu boolean
+---@field decorations.minimize boolean
+---@field decorations.maximize boolean
+---@field input_mode "modeless"|"primary_application_modal"|"system_modal"|" full_application_modal"|"unknown"
+
+---@class client._sub.geometry
+---@field x integer
+---@field y integer
+---@field width integer
+---@field height integer
+
+---@class client._sub.activate
+---@field context string?
+---@field raise boolean
+---@field force boolean
+---@field switch_to_tags boolean
+---@field switch_to_tag boolean
+---@field action boolean
+---@field toggle_minimization boolean
+
+---@class client
+---@field window integer
+---@field name string
+---@field skip_taskbar boolean
+---@field type string
+---@field class string
+---@field instance string
+---@field pid integer
+---@field role string
+---@field machine string
+---@field icon_name string
+---@field icon image
+---@field icon_sizes {[1]: integer, [2]: integer}[] [1] = height, [2] = width
+---@field screen screen
+---@field hidden boolean
+---@field minimized boolean
+---@field size_hints_honor boolean
+---@field border_width integer?
+---@field border_color color?
+---@field urgent boolean
+---@field content raw_surface
+---@field opacity number
+---@field ontop boolean
+---@field above boolean
+---@field below boolean
+---@field fullscreen boolean
+---@field maximized boolean
+---@field maximized_horizontal boolean
+---@field maximized_vertical boolean
+---@field transient_for client._static?
+---@field group_window integer
+---@field leader_window integer
+---@field size_hints client._sub.size_hints?
+---@field motify_wm_hints client._sub.motify_wm_hints
+---@field modal boolean
+---@field focusable boolean
+---@field shape_bounding image
+---@field shape_clip image
+---@field shape_input image
+---@field client_shape_bounding image
+---@field client_shape_clip image
+---@field statup_id string
+---@field valid boolean
+---@field first_tag tag?
+---@field buttons buttons
+---@field keys table
+---@field marked boolean
+---@field is_fixed boolean
+---@field immobilized_horizontal boolean
+---@field immobilized_vertical boolean
+---@field floating boolean
+---@field x integer
+---@field y integer
+---@field width integer
+---@field height integer
+---@field dockable boolean
+---@field request_no_titlebars boolean
+---@field shape shape
+---@field active boolean
+---@field struts fun(self: client, struts: screen._sub.struts)
+---@field isvisible fun(self: client): boolean
+---@field kill fun(self: client)
+---@field swap fun(self: client, c: client)
+---@field tags fun(self: client, tags_table?: tag[]): tag[]?
+---@field raise fun(self: client)
+---@field lower fun(self: client)
+---@field unmanage fun(self: client)
+---@field geometry fun(self: client, geo?: client._sub.geometry): client._sub.geometry
+---@field apply_size_hints fun(self: client, width: integer, height: integer): integer, integer
+---@field get_icon fun(self: client, index: integer): cairo.surface
+---@field jump_to fun(self: client, merge: boolean|function)
+---@field append_keybinding fun(self: client, key: awful.key)
+---@field remove_keybinding fun(self: client, key: awful.key)
+---@field append_mousebinding fun(self: client, button: awful.button)
+---@field remove_mousebinding fun(self: client, button: awful.button)
+---@field to_primary_section fun(self: client)
+---@field to_secondary_section fun(self: client)
+---@field relative_move fun(self: client, x: integer, y: integer, w: integer, h: integer)
+---@field move_to_tag fun(self: client, target: tag)
+---@field toggle_tag fun(self: client, target: tag)
+---@field move_to_screen fun(self: client, s: screen)
+---@field to_selected_tags fun(self: client)
+---@field get_transient_for_matching fun(self: client): client?
+---@field is_transient_for fun(self: client, c2: client): client?
+---@field activate fun(self: client, args: table)
+---@field grant fun(self: client)
+---@field deny fun(self: client)
+---@field emit_signal fun(self: client)
+---@field connect_signal fun(self: client)
+---@field weak_connect_signal fun(self: client)
